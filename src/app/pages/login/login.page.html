@@ -3,7 +3,7 @@
     <form [formGroup]="form">
     <ion-card>
       <ion-card-header>
-        <ion-card-title color="danger" class="container">Reciclica</ion-card-title>
+        <ion-card-title color="warning" class="container">Reciclica</ion-card-title>
       </ion-card-header>
 
       <ion-card-content>
@@ -17,8 +17,8 @@
           ></ion-input>
         </ion-item>
         <!-- <app-error-message [field]="form.get('email')?" message="Email is mandatory"></app-error-message> -->
-        <ion-label color="danger" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['required']">* Email is mandatory</ion-label>
-        <ion-label color="danger" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['email']">* Email is invalid</ion-label>
+        <ion-label color="warning" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['required']">* Email is mandatory</ion-label>
+        <ion-label color="warning" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['email']">* Email is invalid</ion-label>
         <ion-item>
           <ion-input
             label="Password"
@@ -28,10 +28,10 @@
             formControlName="password"
           ></ion-input>
         </ion-item>
-        <ion-label color="danger" *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']">* Password is mandatory</ion-label>
+        <ion-label color="warning" *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']">* Password is mandatory</ion-label>
         <ion-button color="dark" fill="clear" [disabled] = "!form.get('email')?.valid">Forgot Email/Password</ion-button>
-        <ion-button color="danger" size="full" [disabled] = "!form.valid" (click)="login()">Login</ion-button>
-        <ion-button color="danger" size="full" fill="clear" (click)="register()">Register</ion-button>
+        <ion-button color="warning" size="full" [disabled] = "!form.valid" (click)="login()">Login</ion-button>
+        <ion-button color="warning" size="full" fill="clear" (click)="register()">Register</ion-button>
       </ion-card-content>
     </ion-card>
     </form>
